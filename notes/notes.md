@@ -30,3 +30,25 @@ All tests ontains three parts:
 - **Setup** Create the specific environment required for the test. 
 - **Do** Perform the action to be tested.
 - **Verify** Confirm the result is as expected.
+
+
+## Understanding Transformations
+
+In the "Transformation Priority Premise" (a blog post that you are urged to scan), Martin defines transformations as "simple operations that change the behavior of code." Not only does he describe a set of transformations that move code from more specific to more generic, he arranges these transformations in "priority" order, from simpler to more complex. 
+
+He asserts that **when a problem can be solved with any one of several transformations, the transformation with the highest priority is simplest and therefore best.**
+
+
+As was stated in the previous section, as tests get more specific, code should become more generic. Code becomes more generic by becoming more abstract. 
+
+One way to make code more abstract is to DRY it out, that is, to extract duplicate bits of code into a single method, to give that method a name, and then to refer to the code by this new name. DRYing out code removes the duplication and thus reduces its overall size.
+
+As you’ve seen, when working towards Shameless Green, it makes sense sometimes to eliminate duplication and other times to retain it. The Shameless Green solution is optimized to be straightforward and intention-revealing, and it doesn’t much concern itself with changeability or future maintenance. The goal is to use green to maximize your understanding of the problem and to unearth all available information before committing to abstractions.
+
+
+## Case(Switch) vs If/Else
+
+Use of if / elsif implies that each subsequent condition varies in a meaningful way. Because elsif is often used to test wildly different conditions, future readers will feel obliged to closely
+examine each one. 
+
+In contrast, use of case implies that every condition checks for equality against an explicit value. While it’s true that the when clause supports more complicated operations, the form above is most common and is the one your readers will expect. Readers of case statements expect conditions to be fundamentally the same.
