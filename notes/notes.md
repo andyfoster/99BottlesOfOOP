@@ -52,3 +52,21 @@ Use of if / elsif implies that each subsequent condition varies in a meaningful 
 examine each one. 
 
 In contrast, use of case implies that every condition checks for equality against an explicit value. While it’s true that the when clause supports more complicated operations, the form above is most common and is the one your readers will expect. Readers of case statements expect conditions to be fundamentally the same.
+
+## The Horizontal Path
+
+Following the horizontal path means writing code to produce every kind of verse before diverging onto tangents to DRY out small bits of code that the verses have in common. The goal is to quickly maximize the number of whole examples before extracting abstractions from their parts.
+
+
+Code longs to be as ignorant as possible. 
+
+
+In Chapter 28 of Test-Driven Development by Example, Kent Beck describes different ways to make tests pass. Three of his "Green Bar Patterns" are:
+
+- Fake It ("Til You Make It") 
+- Obvious Implementation 
+- Triangulate
+
+
+
+[More Notes](https://medium.com/extreme-programming/notes-from-99-bottles-of-oop-5c902afd3948)
