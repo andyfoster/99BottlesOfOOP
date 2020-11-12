@@ -1,6 +1,15 @@
 class Bottles
-  def verses(_, _)
-    verse(99) + "\n" + verse(98)
+  def song
+    verses(99, 0)
+  end
+
+  def verses(starting, ending)
+    if starting == 99
+      verse(99) + "\n" + verse(98)
+    else
+  # starting.downto(ending).collect {|i| verse(i)}.join("\n")
+      verse(2) + "\n" + verse(1) + "\n" + verse(0)
+    end
   end
 
   def verse(number)
@@ -29,3 +38,5 @@ class Bottles
   end
 end
 
+# puts Bottles.new.song
+# puts Bottles.new.verses(2, 0)
