@@ -5,11 +5,6 @@ class Bottles
 
   def verses(starting, ending)
     starting.downto(ending).collect {|i| verse(i)}.join("\n")
-    # if starting == 99
-    #   verse(99) + "\n" + verse(98)
-    # else
-    #   verse(2) + "\n" + verse(1) + "\n" + verse(0)
-    # end
   end
 
   def verse(number)
