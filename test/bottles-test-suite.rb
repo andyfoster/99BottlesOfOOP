@@ -75,6 +75,11 @@ class BottlesTest < Minitest::Test
     assert_equal expected, Bottles.new.verses(2, 0)
   end
 
+  # This method is independent of the current implementation and so 
+  # guaranteed to survive changes to Bottles
+  # Tests are not the place for abstractions - they are the place for concretions.
+  # DRY is a very good idea in code, but much less useful in tests. 
+  # When testing, the best choice is very often just to write it down.
   def test_the_whole_song
     expected = "99 bottles of beer on the wall, " +
       "99 bottles of beer.\n" +
