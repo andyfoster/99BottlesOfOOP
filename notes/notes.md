@@ -1,5 +1,7 @@
 # Book Notes
 
+(basically just highlights and key points I want to be able to reference later)
+
 # 1. Rediscovering Simplicity
 
 When you were new to programming you wrote simple code. Although you may not have appreciated it at the time, this was a great strength. Since then, you’ve learned new skills, tackled harder problems, and produced increasingly complex solutions. Experience has taught you that most code will someday change, and you’ve begun to craft it in anticipation of that day. Complexity seems both natural and inevitable.
@@ -66,6 +68,59 @@ In Chapter 28 of Test-Driven Development by Example, Kent Beck describes differe
 - Fake It ("Til You Make It") 
 - Obvious Implementation 
 - Triangulate
+
+
+
+## SOLID Design Principles
+
+The SOLID acronym was coined by Michael Feathers and popularized by Robert Martin. Each letter stands for a well-known principle in object-oriented design. Here’s a formal definition of each one:
+
+### S - Single Responsibility
+The methods in a class should be cohesive around a single purpose.
+
+### O - Open-Closed
+Objects should be open for extension, but closed for modification.
+
+### L - Liskov Substitution
+Subclasses should be substitutable for their superclasses.
+
+### I - Interface Segregation
+Objects should not be forced to depend on methods they don’t use.
+
+### D - Dependency Inversion
+Depend on abstractions, not on concretions.
+
+## Open Principle
+
+The "open" principle says that you should not conflate the process of moving code around, of refactoring, with the act of adding new features. You should instead separate these two operations. When faced with a new requirement, first rearrange the existing code such that it’s open to the new feature, and once that’s complete, then add the new code.
+
+
+## 3.3. Recognizing Code Smells
+
+The trick to successfully improving code that contains many flaws is to isolate and correct them one at a time. In his Refactoring book, Martin Fowler identifies and names many common flaws, and provides refactoring recipes to fix them. Chapter 3  calls the flaws "code smells." Thanks to Fowler’s book, if you can identify a smell within code, you can look up the curative refactoring, and apply that refactoring to remove the flaw.
+
+Therefore, the current task is to refactor the verse method to remove the duplication, in hope and expectation that the resulting code will be more open to the six-pack requirement.
+
+Before undertaking this refactoring, it must be admitted that there is no direct connection between removing the duplication, and succeeding in making the code open to the six-pack requirement. That, however, is the beauty of this technique. You don’t have to know how to solve the whole problem in advance. The plan is to nibble away, one code smell at a time, in faith that the path to openness will be revealed.
+
+Tests are the wall at your back. Successful refactorings lean on green. Therefore, you should never change tests during a refactoring. If your tests are flawed such that they interfere with refactoring, improve them first, and then refactor.
+
+Considered from a higher viewpoint, each variant is merely a verse in the song; in that sense they are all the same. Underlying each concrete variant is a generalized verse abstraction. If you could find this abstraction, you could use it to reduce the four-branch case statement to a single line of code.
+
+The good news is that you don’t have to be able to see the abstraction in advance. You can find it by iteratively applying a small set of simple rules. These rules are known as "Flocking Rules", and are as follows:
+
+#### Flocking Rules
+
+1. Select the things that are most alike.
+2. Find the smallest difference between them.
+3. Make the simplest change that will remove that difference.
+
+Changes to code can be subdivided into four distinct steps:
+
+1. parse the new code
+2. parse and execute it
+3. parse, execute and use its result
+4. delete unused code
 
 
 
