@@ -123,5 +123,11 @@ Changes to code can be subdivided into four distinct steps:
 4. delete unused code
 
 
+## 3.7.1. Focusing on Difference
+
+When examining complicated problems, the eye is first drawn towards sameness. However, despite the fact that sameness is easier to identify, difference is more useful because it has more meaning. DRYing out sameness has some value, but DRYing out difference has more.
+
+
+
 
 [More Notes](https://medium.com/extreme-programming/notes-from-99-bottles-of-oop-5c902afd3948)
