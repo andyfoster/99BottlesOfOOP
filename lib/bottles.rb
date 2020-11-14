@@ -7,6 +7,9 @@ class Bottles
     starting.downto(ending).collect {|i| verse(i)}.join("\n")
   end
 
+  def container
+  end
+
   def verse(number)
     case number
     when 0

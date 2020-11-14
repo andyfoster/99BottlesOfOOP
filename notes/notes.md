@@ -122,10 +122,25 @@ Changes to code can be subdivided into four distinct steps:
 3. parse, execute and use its result
 4. delete unused code
 
+As you’re following the rules:
+
+1. In general, change only one line at a time. 
+2. Run the tests after every change.
+3. If you go red, undo and make a better change.
 
 ## 3.7.1. Focusing on Difference
 
 When examining complicated problems, the eye is first drawn towards sameness. However, despite the fact that sameness is easier to identify, difference is more useful because it has more meaning. DRYing out sameness has some value, but DRYing out difference has more.
+
+
+### Naming the 'bottles' part of the sentence
+
+It might seem as if "Unit" would be a good header. Although it’s true that every example is some kind of unit, there are two problems with this name. First, it’s too abstract. Unit is not one level of abstraction higher than the examples—it’s many. There are plenty of good naming alternatives on the continuum between "bottle" and "unit." Next, unit is not in the language of the domain. The name you choose will be the name you use in conversations with your customers. Naming things after domain concepts improves communication between you and the folks who pay the bills. Only good can come of this.
+
+If you were to ask your users, "What kind of thing is a bottle?," they wouldn’t reply "It’s a unit." Instead
+they might call it the container. In the context of "99 Bottles," container is a good name for this concept. Container is meaningful, understandable, and unambiguous.
+
+
 
 
 
